@@ -1,0 +1,613 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+:root {
+  --greenBright: #b5f44a;
+  --green: #70ee9c;
+  --greenDull: #79aea3;
+  --purple: #8377d1;
+  --black: rgb(0, 0, 0);
+  --grey: rgba(20, 20, 20, 0.8);
+  --white: rgb(255, 255, 255);
+  letter-spacing: 0.2em;
+  font-family: avenir, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts {
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  height: 5%;
+  z-index: 999999;
+}
+
+.form-control {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 15px;
+  border: solid var(--white) 1px;
+}
+
+.submit {
+  align-self: center;
+  text-align: center;
+  background-color: var(--green);
+  border-color: var(--green);
+  border-radius: 15px;
+  border-style: solid;
+  color: var(--black);
+  cursor: pointer;
+  display: inline-flex;
+  fill: var(--grey);
+  padding: 8px 16px 8px 8px;
+  white-space: nowrap;
+}
+
+.submit:hover {
+  background-color: var(--greenBright);
+}
+
+
+.commutes {
+  align-content: stretch;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  min-height: 256px;
+  min-width: 360px;
+  overflow: auto;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.commutes-modal h2 {
+  color: var(--white);
+}
+
+.commutes-info {
+  flex: 0 0 110px;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--black);
+}
+
+.commutes-initial-state {
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+  display: flex;
+  height: 98px;
+  margin-top: 8px;
+  padding: 0 16px;
+}
+
+.commutes-initial-state svg {
+  align-self: center;
+}
+
+.commutes-initial-state .description {
+  align-self: center;
+  flex-grow: 1;
+  padding: 0 16px;
+}
+
+.commutes-initial-state .description .heading {
+  font-size: 22px/28px;
+  margin: 0;
+}
+
+.commutes-initial-state .description p {
+  color: var(--white);
+  font-size: 13px/20px;
+  margin: 0;
+}
+
+.commutes-initial-state .add-button {
+  align-self: center;
+  background-color: var(--green);
+  border-color: var(--green);
+  border-radius: 4px;
+  border-style: solid;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-flex;
+  fill: var(--grey);
+  padding: 8px 16px 8px 8px;
+  white-space: nowrap;
+}
+
+.commutes-initial-state .add-button .label {
+  font: 600 20px/28px avenir, sans-serif;
+  padding-left: 8px;
+  color: var(--black);
+}
+
+@media (max-width: 535px) {
+  .commutes-initial-state svg {
+    display: none;
+  }
+
+  .commutes-initial-state .description {
+    padding-left: 0;
+  }
+
+  .commutes-initial-state .description .heading {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
+.commutes-destinations {
+  /* display: none; */
+  position: relative;
+  width: 100%;
+  background-color: var(--grey);
+}
+
+.commutes-destinations:hover .visible {
+  display: block;
+}
+
+.commutes-destinations .destinations-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 8px 8px 4px 8px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.commutes-destinations .destinations-container::-webkit-scrollbar {
+  display: none;
+}
+
+.commutes-destinations .destinations-container::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  width: 4px;
+}
+
+.commutes-destinations .destination-list {
+  display: flex;
+  flex-grow: 1;
+}
+
+.commutes-destinations .right-control,
+.commutes-destinations .left-control {
+  background-color: var(--grey);
+  border-radius: 40px;
+  border-style: none;
+  bottom: 35px;
+  box-shadow: 0 2px 3px 0 rgb(60 64 67 / 30%),
+    0 6px 10px 4px rgb(60 64 67 / 15%);
+  cursor: pointer;
+  fill: var(--black);
+  height: 40px;
+  padding: 8px;
+  position: absolute;
+  width: 40px;
+  z-index: 100;
+}
+
+.commutes-destinations .right-control:hover,
+.commutes-destinations .left-control:hover {
+  background-color: var(--grey);
+}
+
+.commutes-destinations .left-control {
+  left: 16px;
+}
+
+.commutes-destinations .right-control {
+  right: 16px;
+}
+
+.commutes-destinations .add-button {
+  align-items: center;
+  background-color: var(--grey);
+  border-radius: 8px;
+  border-color: var(--grey);
+  border-style: solid;
+  color: var(--green);
+  cursor: pointer;
+  display: flex;
+  fill: var(--green);
+  flex-direction: column;
+  flex-grow: 1;
+  font-weight: bold;
+  gap: 4px;
+  justify-content: center;
+  min-width: 156px;
+  padding: 20px 16px;
+}
+
+.commutes-destinations .add-button:hover {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.commutes-destinations .destination {
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+    0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  fill: var(--black);
+  flex: 1 1 0;
+  height: 72px;
+  justify-content: space-between;
+  margin-right: 8px;
+  min-width: 256px;
+  overflow: hidden;
+  padding: 12px;
+  position: relative;
+}
+
+.commutes-destinations .active:after {
+  background-color: var(--green);
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.commutes-destinations .active .destination-controls .directions-button {
+  fill: var(--green);
+}
+
+.commutes-destinations .active .destination-controls .edit-button {
+  display: block;
+}
+
+/* .commutes-destinations .active .metadata .location-marker {
+  background-color: var(--grey);
+  color: var(--greenBright);
+} */
+
+.commutes-destinations .destination:hover,
+.commutes-destinations .destination:focus-within {
+  background-color: var(--grey);
+}
+
+.commutes-destinations .destination:hover .edit-button,
+.commutes-destinations .destination:focus-within .edit-button {
+  display: block;
+}
+
+.commutes-destinations .destination .destination-content {
+  font-size: 12px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.commutes-destinations .destination .metadata {
+  align-items: center;
+  display: flex;
+  margin-bottom: 4px;
+  gap: 4px;
+}
+
+.commutes-destinations .destination svg {
+  height: 18px;
+  width: 18px;
+}
+
+/* .commutes-destinations .destination .location-marker {
+  background-color: var(--black);
+  border-radius: 8px;
+  color: var(--white);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: center;
+  width: 16px;
+} */
+
+.commutes-destinations .destination .address {
+  margin-bottom: 4px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.commutes-destinations .destination .address abbr {
+  text-decoration: none;
+}
+
+.commutes-destinations .destination .destination-eta {
+  color: var(--purple);
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.commutes-destinations .destination .destination-controls {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  min-width: 70px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.commutes-destinations .destination .directions-button {
+  align-items: center;
+  background-color: var(--grey);
+  border-radius: 32px;
+  border: 1px solid var(--grey);
+  cursor: pointer;
+  display: flex;
+  fill: #5f6368;
+  height: 34px;
+  justify-content: center;
+  margin: 0;
+  width: 34px;
+}
+
+.commutes-destinations .destination .directions-button:hover {
+  background-color: var(--grey);
+  fill: var(--green);
+}
+
+.commutes-destinations .destination .edit-button {
+  background-color: var(--grey);
+  border-radius: 20px;
+  border: 1px solid var(--grey);
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  margin: 8px 0 0 0;
+  padding: 3px 12px 3px 5px;
+  fill: var(--grey);
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+}
+
+.commutes-destinations .destination .edit-button svg {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+
+.commutes-destinations .destination .edit-button:hover {
+  background-color: var(--greenBright);
+}
+
+.commutes-map {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.commutes-map .map-view {
+  background-color: var(--purple);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.commutes-modal-container {
+  align-items: center;
+  background-color: var(--grey);
+  /* display: none; */
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.commutes-modal {
+  background: var(--grey);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px rgba(0, 0, 0, 0.14),
+    0 1px 10px rgba(0, 0, 0, 0.12);
+  height: 256px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+}
+
+.commutes-modal .content {
+  padding: 24px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commutes-modal .heading {
+  font: 24px/32px avenir, sans-serif;
+  margin: 0;
+}
+
+.commutes-modal input {
+  font: 16px/24px avenir, sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.commutes-modal .error {
+  background-color: var(--grey);
+  border: 1px solid #c03;
+}
+
+.commutes-modal .error-message {
+  color: #c03;
+  display: inline-block;
+  font: 12px/14px avenir, sans-serif;
+  margin: 0 0 5px;
+}
+
+.commutes-modal .travel-modes {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  margin-bottom: 12px;
+  padding: 0;
+  width: 100%;
+}
+
+.commutes-modal .travel-modes [type="radio"] {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+
+.commutes-modal .travel-modes label {
+  align-items: center;
+  border: solid var(--grey);
+  border-width: 1px 0.031em;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #5f6368;
+  flex: 1;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.commutes-modal .travel-modes label:hover {
+  background-color: var(--green);
+}
+
+.commutes-modal .travel-modes svg {
+  height: 24px;
+  width: 24px;
+}
+
+.commutes-modal .travel-modes .left-label {
+  border-left-width: 1px;
+  border-radius: 4px 0 0 4px;
+}
+
+.commutes-modal .travel-modes .right-label {
+  border-radius: 0 4px 4px 0;
+  border-right-width: 1px;
+}
+
+/* .commutes-modal .travel-modes input[type=radio]:checked+label {
+  background: #e8f0fe;
+  fill: #1a73e8;
+} */
+
+.commutes-modal .modal-action-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.commutes-modal .modal-action-bar button {
+  background: var(--grey);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.commutes-modal .modal-action-bar .delete-destination-button {
+  color: #c5221f;
+  left: 18px;
+  position: absolute;
+}
+
+.commutes-modal .modal-action-bar .cancel-button {
+  color: var(--white);
+}
+
+.commutes-modal .modal-action-bar .add-destination-button,
+.commutes-modal .modal-action-bar .edit-destination-button {
+  color: #b5f44a;
+}
+
+.hide {
+  display: none;
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: space-between; /* Distributes space equally between children */
+}
+
+.child-div {
+  min-width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  border: 1px solid gray;
+}
