@@ -12,9 +12,9 @@
 <h1 align="center"><b>Safe Walk</b></h1>
 <h3 align="center">Going home can be a tough situation for people walking alone at night. This application leverages the Google Maps API and the CrimeoMeter API to display a heat map of recent assault and robbery locations within 10 miles of the users position.</h3>
 
-<p align="center">
+<!-- <p align="center">
     <img src="" alt="Project Banner" width=60% height=60%/>
-</p>
+</p> -->
 
 ## Table of Contents
 
