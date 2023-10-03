@@ -1,18 +1,16 @@
 <p align="center">
+    <a href=""><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /></a>
+    <a href=""><img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" /></a>
+    <a href=""><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /></a>
+    <a href=""><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" /></a>
+    <br>
     <a href=""><img src="https://img.shields.io/pypi/l/ansicolortags.svg" /></a>
     <a href=""><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a>
     <a href=""><img src="https://badgen.net/github/commits/jonrosenblum/Safe-Walk" /></a>
-    <br>
-    <a href=""><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /></a>
-    <a href=""><img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" /></a>
-    <a href=""><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /></a>
-    <br>
-    <a href=""><img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" /></a>
-
 </p>
 
 <h1 align="center"><b>Safe Walk</b></h1>
-<h4 align="center">Going home can be a tough situation for people walking alone at night. We want to implement an interactive map where people can find a safe way home avoiding corners where crimes are likely to happen. This project leverages the Google Maps API and the CrimeoMeter API to display a heat map of recent assault and robbery locations within 10 miles of the users position. This visual element is bolstered with directions to a desired destination input by the user.</h4>
+<h4 align="center">Going home can be a tough situation for people walking alone at night. This application leverages the Google Maps API and the CrimeoMeter API to display a heat map of recent assault and robbery locations within 10 miles of the users position.</h4>
 
 <p align="center">
     <img src="" alt="Project Banner" width=60% height=60%/>
@@ -21,101 +19,27 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Technical Requirements](#technical-requirements)
-- [Project Structure](#project-structure)
 - [Key Functionalities](#key-functionalities)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
 
-Safe Walk is a
-
-## Technical Requirements
-
-To run Safe Walk locally, you need the following:
-
-- Python 3.7 or later
-- Dash 1.21.0 or later
-- Plotly 5.0.0 or later
-- Pandas 1.1.0 or later
-
-## Project Directory Hierarchy
-
-Upon successful setup (see **Getting Started**), you should see the following project directory hierarchy.
-
-```
-
-```
-
--
--
--
--
--
--
+Safe Walk is an advanced web application meticulously crafted using the powerful MERN (MongoDB, Express.js, React, Node.js) tech stack. This web-based solution prioritizes user safety, harnessing the capabilities of the Google Maps API and the Crimeometer API to offer a secure and reliable route planning experience for individuals traveling to their destination.
 
 ## Key Functionalities
 
-Safe Walk offers the following functionalities:
+1. **Route Safety Assessment**: Safe Walk intelligently analyzes real-time data from Google Maps and the Crimeometer API to suggest the safest route for users to reach their destination. By considering factors such as crime rates, time of day, and user preferences, it provides personalized route recommendations that prioritize safety.
 
--
--
--
--
--
+2. **Emergency Contact Integration with Twilio**: Safety is paramount, and Safe Walk ensures peace of mind for users and their loved ones. The web application seamlessly integrates with Twilio, a leading communication platform, to notify designated emergency contacts if the user does not arrive at their destination within a predefined timeframe. This integration enables swift assistance in case of unforeseen circumstances.
 
-### Getting Started
+3. **Real-time Location Tracking**: Safe Walk continually tracks the user's location in real-time, offering updates to their designated emergency contacts. Additionally, users can share their live location with friends or family, allowing them to monitor the journey in real-time.
 
-1. Clone the repository:
+4. **User-Friendly Interface**: Safe Walk boasts an intuitive and user-friendly web interface, ensuring that users can easily access its safety features. Navigating the application is straightforward, making safety accessible to a wide range of users.
 
-```bash
-git clone https://github.com/jonrosenblum/Safe-Walk.git
-```
+5. **Personalized Preferences**: Safe Walk respects individual preferences. Users can customize safety criteria, such as selecting the safest route by foot, bicycle, or public transportation. They can also configure notification timeframes and tailor emergency message templates to their liking.
 
-2. Navigate to the project directory:
-
-```bash
-cd Safe-Walk
-```
-
-3. Install the required dependencies:
-
-```bash
-npm install
-```
-
-4. Start the development server:
-
-```bash
-npm start
-```
-
-5. Open your web browser and navigate to http://localhost:3000 to access Safe Walk locally.
-
-## Usage
-
-1.
-2.
-3.
-4.
-5.
-
-## Dependencies
-
-Safe Walk relies on the following libraries:
-
--
--
--
--
-
-## Contributing
-
-Contributions to Safe Walk are welcome! If you encounter any issues, have feature suggestions, or would like to contribute code, please open an issue or pull request on the GitHub repository.
+6. **Privacy and Data Security**: The Safe Walk web application places a high priority on privacy and data security. User information is safeguarded and used exclusively for safety-related purposes, ensuring the utmost confidentiality.
 
 ## License
 
