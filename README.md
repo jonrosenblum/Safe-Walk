@@ -20,7 +20,6 @@
 
 - [Introduction](#introduction)
 - [Key Functionalities](#key-functionalities)
-- [Getting Started](#getting-started)
 - [License](#license)
 
 ## Introduction
